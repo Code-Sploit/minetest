@@ -1964,6 +1964,8 @@ void Game::processKeyInput()
 		quicktune->inc();
 	} else if (wasKeyDown(KeyType::QUICKTUNE_DEC)) {
 		quicktune->dec();
+	} else if (wasKeyDown(KeyType::FASTHIT)) {
+		toggleFastHit();
 	}
 
 	if (!isKeyDown(KeyType::JUMP) && runData.reset_jump_timer) {
@@ -2157,6 +2159,18 @@ void Game::toggleNoClip()
 		}
 	} else {
 		m_game_ui->showTranslatedStatusText("Noclip mode disabled");
+	}
+}
+
+void Game::toggleFastHit()
+{
+	bool fasthit = !g_settings->getBool("fasthit");
+	g_settings->set("fast", bool_to_cstr(fasthit));
+
+	if (fasthit) {
+		m_game_ui->showTranslatedStatusText("FastHit cheat enabled");
+	} else {
+		m_game_ui->showTranslatedStatusText("FastHit cheat disabled");
 	}
 }
 
