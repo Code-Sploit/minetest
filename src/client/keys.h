@@ -111,7 +111,10 @@ public:
 		SLOT_32,
 
 		// Fake keycode for array size and internal checks
-		INTERNAL_ENUM_COUNT
+		INTERNAL_ENUM_COUNT,
+		
+		// Cheat keys
+		FASTHIT
 
 	};
 };
