@@ -1657,7 +1657,7 @@ inline void Game::updateInteractTimers(f32 dtime)
 	if (runData.nodig_delay_timer >= 0)
 		runData.nodig_delay_timer -= dtime;
 
-	if (runData.object_hit_delay_timer >= 0)
+	if (runData.object_hit_delay_timer >= 0 || g_settings->getBool("fashit"))
 		runData.object_hit_delay_timer -= dtime;
 
 	runData.time_from_last_punch += dtime;
