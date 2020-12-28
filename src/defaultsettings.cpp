@@ -141,6 +141,9 @@ void set_default_settings(Settings *settings)
 	settings->setDefault("keymap_slot30", "");
 	settings->setDefault("keymap_slot31", "");
 	settings->setDefault("keymap_slot32", "");
+	
+	// Cheat keys
+	settings->setDefault("fashit", "flalse");
 
 	// Some (temporary) keys for debugging
 	settings->setDefault("keymap_quicktune_prev", "KEY_HOME");
