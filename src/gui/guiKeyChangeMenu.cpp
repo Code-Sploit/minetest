@@ -79,6 +79,9 @@ enum
 	GUI_ID_CB_AUX1_DESCENDS,
 	GUI_ID_CB_DOUBLETAP_JUMP,
 	GUI_ID_CB_AUTOJUMP,
+	
+	// Cheat buttons
+	GUI_ID_FASTHIT_BUTTON
 };
 
 GUIKeyChangeMenu::GUIKeyChangeMenu(gui::IGUIEnvironment* env,
@@ -445,4 +448,5 @@ void GUIKeyChangeMenu::init_keys()
 	this->add_key(GUI_ID_KEY_HUD_BUTTON,       wgettext("Toggle HUD"),       "keymap_toggle_hud");
 	this->add_key(GUI_ID_KEY_CHATLOG_BUTTON,   wgettext("Toggle chat log"),  "keymap_toggle_chat");
 	this->add_key(GUI_ID_KEY_FOG_BUTTON,       wgettext("Toggle fog"),       "keymap_toggle_fog");
+	this->add_key(GUI_ID_FASTHIT_BUTTON,       wgettext("Toggle FastHit"),   "keymap_toggle_fasthit");
 }
